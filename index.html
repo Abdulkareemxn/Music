@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <video autoplay muted loop id="bgVideo">
+    <source src="bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <div class="music-player">
+    <div class="player">
+      <div class="thumbnail-container">
+        <!-- Placeholder for song thumbnail -->
+        <img src="placeholder.jpg" alt="Song Thumbnail" class="thumbnail">
+      </div>
+      <div id="songInfo" class="song-info">
+        <div id="songName" class="song-name">Now Playing: </div>
+      </div>
+      <audio id="audio" controls controlsList="nodownload">
+        <source id="audioSource" src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="controls">
+        <img id="backwardBtn" src="backward.png" alt="Previous" class="control-icon">
+        <img id="playPauseBtn" src="play.png" alt="Play" class="control-icon">
+        <img id="forwardBtn" src="forward.png" alt="Next" class="control-icon">
+      </div>
+      <div class="volume-control">
+        <input type="range" min="0" max="100" value="100" step="1" id="volumeSlider">
+      </div>
+<!-- Existing HTML code -->
+<div class="search-container">
+  <input type="text" id="searchInput" class="search-input" placeholder="Search for a song">
+  <button id="searchBtn" class="search-btn">Search</button>
+  <div id="searchSuggestions" class="search-suggestions"></div>
+</div>
+<!-- Existing HTML code -->    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
